@@ -134,6 +134,11 @@ Platform Specific Issues
   * CMake will often pull in different versions of the Python interpreter and the Python library, requiring the user to explicitly pass the location of the Python library to CMake. For example, to build with MacPorts' Python 2.7:
 
             cmake -DPYTHON_LIBRARY=/opt/local/lib/libpython2.7.dylib -DPYTHON_INCLUDE_DIR=/opt/local/Library/Frameworks/Python.framework/Headers ..
+
+   To build using homebrew's python use:
+   
+            cmake -DUSE_QT4=ON -DUSE_HDF5=ON -DUSE_PYTHON=ON -DPYTHON_LIBRARY=/usr/local/Cellar/python//2.7.13/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib -DPYTHON_INCLUDE_DIR=/usr/local/Cellar/python//2.7.13/Frameworks/Python.framework/Headers ..
+
 Note that the python2.7-config tool is useful for locating the library and include directory.
 
 Relevant Citations
